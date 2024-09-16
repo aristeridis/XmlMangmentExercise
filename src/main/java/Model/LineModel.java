@@ -1,6 +1,5 @@
 package Model;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,9 +9,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-class ChapterModel {
+class LineModel {
 
-	private int numChapter;
-	private List<ParagraphModel> paragraphs;
-
+	private int lineNum;
+	private String content;
 }

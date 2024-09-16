@@ -14,14 +14,14 @@ import lombok.Setter;
 
 public class BookModel {
 
-	public BookModel(String author, Date creationDate, List<ChapterModel> numChapters) {
+	public BookModel(String author, Date creationDate, List<ChapterModel> chapters) {
 		this.author = author;
 		this.creationDate = creationDate;
-		this.numChapters = numChapters;
+		this.chapters = chapters;
 	}
 	private String author;
 	private Date creationDate;
-	private List<ChapterModel> numChapters;
+	private List<ChapterModel> chapters;
 	private int numParagraphs;
 	private int numLines;
 	private int words;
