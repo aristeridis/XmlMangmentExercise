@@ -1,5 +1,6 @@
 package Model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -14,13 +15,13 @@ import lombok.Setter;
 
 public class BookModel {
 
-	public BookModel(String author, Date creationDate, List<ChapterModel> chapters) {
+	public BookModel(String author, LocalDateTime creationDate, List<ChapterModel> chapters) {
 		this.author = author;
 		this.creationDate = creationDate;
 		this.chapters = chapters;
 	}
 	private String author;
-	private Date creationDate;
+	private LocalDateTime creationDate;
 	private List<ChapterModel> chapters;
 	private int numParagraphs;
 	private int numLines;

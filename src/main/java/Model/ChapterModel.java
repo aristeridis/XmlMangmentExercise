@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-class ChapterModel {
+public class ChapterModel {
 
 	private int numChapter;
 	private List<ParagraphModel> paragraphs;

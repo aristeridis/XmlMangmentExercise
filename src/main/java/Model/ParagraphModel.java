@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-class ParagraphModel {
+public class ParagraphModel {
 
 	private int numParagraph;
 	private List<LineModel> lines;

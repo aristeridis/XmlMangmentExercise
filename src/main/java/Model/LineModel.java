@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-class LineModel {
+public class LineModel {
 
 	private int lineNum;
 	private String content;
