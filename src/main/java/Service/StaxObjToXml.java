@@ -24,9 +24,9 @@ public class StaxObjToXml {
             xmlStreamWriter.writeCharacters(book.getAuthor());
             xmlStreamWriter.writeEndElement();
 
-            xmlStreamWriter.writeStartElement("creationDate");
-            xmlStreamWriter.writeCharacters(book.getCreationDate().toString());
-            xmlStreamWriter.writeEndElement();
+//            xmlStreamWriter.writeStartElement("creationDate");
+//            xmlStreamWriter.writeCharacters(book.getCreationDate().toString());
+//            xmlStreamWriter.writeEndElement();
 
             xmlStreamWriter.writeStartElement("numParagraphs");
             xmlStreamWriter.writeCharacters(String.valueOf(book.getNumParagraphs()));

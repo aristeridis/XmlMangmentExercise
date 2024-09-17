@@ -20,6 +20,7 @@ public class XsdGenerator {
 
 			// Use SchemaOutputResolver to generate the XSD schema
 			context.generateSchema(new MySchemaOutputResolver(xsdFileName));
+			System.out.println("xsd created");
 
 		} catch (JAXBException e) {
 			e.printStackTrace();

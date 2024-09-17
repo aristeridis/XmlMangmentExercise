@@ -15,18 +15,21 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@XmlRootElement(name = "book")
+@XmlType(propOrder = {"author", "chapters", "distinctWords", "numParagraphs", "numLines", "words"})
+
 public class BookModel {
 
 	public BookModel(String author, Date creationDate, List<ChapterModel> chapters) {
 		this.author = author;
-		this.creationDate = creationDate;
+		//	this.creationDate = creationDate;
 		this.chapters = chapters;
 	}
 	private String author;
-	private Date creationDate;
 	private List<ChapterModel> chapters;
-	private int numParagraphs;
-	private int numLines;
-	private int words;
 	private int distinctWords;
+	private int numLines;
+	//private Date creationDate;
+	private int numParagraphs;
+	private int words;
 }

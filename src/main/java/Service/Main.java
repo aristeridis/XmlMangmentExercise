@@ -40,16 +40,16 @@ public class Main {
 		}
 		try {
 			XsdGenerator.xsdGenerator();
-//		try {
-//		boolean validity = XmlValidator.validateXml(xmlFilePath ,xsdFilePath);
-//		  if (validity)
-//            System.out.println("The file is valid");
-//     else
-//            System.out.println("The file is not valid");
-//
-//		} catch (Exception e) {
-//			e.getMessage();
-//		}
+		try {
+		boolean validity = XmlValidator.validateXml(xmlFilePath ,xsdFilePath);
+		  if (validity)
+            System.out.println("The file is valid");
+     else
+            System.out.println("The file is not valid");
+
+		} catch (Exception e) {
+			e.getMessage();
+		}
 
 		} catch (IOException ex) {
 			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
