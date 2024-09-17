@@ -1,6 +1,9 @@
 package Model;
 
-import java.time.LocalDateTime;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlList;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import java.util.Date;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -12,22 +15,18 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class BookModel {
 
-	public BookModel(String author, LocalDateTime creationDate, List<ChapterModel> chapters) {
+	public BookModel(String author, Date creationDate, List<ChapterModel> chapters) {
 		this.author = author;
 		this.creationDate = creationDate;
 		this.chapters = chapters;
 	}
 	private String author;
-	private LocalDateTime creationDate;
+	private Date creationDate;
 	private List<ChapterModel> chapters;
 	private int numParagraphs;
 	private int numLines;
 	private int words;
 	private int distinctWords;
-	
-	
-
 }

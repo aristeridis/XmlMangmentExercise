@@ -16,11 +16,11 @@ import java.util.Date;
 
 public class TxtToObject {
 
-	public static void main(String[] args) {
-		String txtFile = "txt/sample-lorem-ipsum-text-file.txt";
+	public static BookModel TxtToObject(String txtName) {
+		Date currentDate = new Date();
 		BufferedReader txtReader = null;
 		try {
-			txtReader = new BufferedReader(new FileReader(txtFile));
+			txtReader = new BufferedReader(new FileReader(txtName));
 
 		} catch (FileNotFoundException fnfe) {
 			fnfe.getMessage();
@@ -46,7 +46,7 @@ public class TxtToObject {
 				lineNum++;
 				if (line.endsWith(".")) {
 					lineNum++;
-					
+
 				}
 
 				ParagraphModel paragraphModel = new ParagraphModel(lineNum, List.of(new LineModel(lineNum, line)));
@@ -67,7 +67,7 @@ public class TxtToObject {
 				chapters.add((new ChapterModel(chapterNum, new ArrayList<>(paragraphs))));
 			}
 			txtReader.close();
-			BookModel book = new BookModel(line, LocalDateTime.now(), chapters);
+			BookModel book = new BookModel(line, currentDate, chapters);
 			book.setNumParagraphs(paragraphCount);
 			book.setNumLines(lineNum);
 			book.setWords(wordCount);
@@ -79,11 +79,12 @@ public class TxtToObject {
 			System.out.println("Paragraphs:" + book.getNumParagraphs());
 			System.out.println("Lines:" + book.getNumLines());
 			System.out.println("Words:" + book.getWords());
-			System.out.println("Date"+LocalDateTime.now());
-
+			System.out.println("Date" + LocalDateTime.now());
+			return book;
 		} catch (IOException ioe) {
 			ioe.getMessage();
 		}
+		return null;
 
 	}
 
