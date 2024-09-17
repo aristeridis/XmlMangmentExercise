@@ -72,6 +72,9 @@ public class TxtToObject {
 			book.setNumLines(lineNum);
 			book.setWords(wordCount);
 			book.setAuthor("Alexandros Aristeridis");
+			System.out.println("--------------------------------------");
+			System.out.println("Object from txt Statistics");
+			System.out.println("--------------------------------------");
 
 			System.out.println("Book object created");
 			System.out.println("Author:" + book.getAuthor());
@@ -79,7 +82,9 @@ public class TxtToObject {
 			System.out.println("Paragraphs:" + book.getNumParagraphs());
 			System.out.println("Lines:" + book.getNumLines());
 			System.out.println("Words:" + book.getWords());
-			System.out.println("Date" + LocalDateTime.now());
+			System.out.println("Date:" + LocalDateTime.now());
+			System.out.println("--------------------------------------");
+
 			return book;
 		} catch (IOException ioe) {
 			ioe.getMessage();
