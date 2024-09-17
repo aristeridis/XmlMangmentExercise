@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="bookModel">
+    <xs:sequence>
+      <xs:element name="author" type="xs:string" minOccurs="0"/>
+      <xs:element name="chapters" type="chapterModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="distinctWords" type="xs:int"/>
+      <xs:element name="numLines" type="xs:int"/>
+      <xs:element name="numParagraphs" type="xs:int"/>
+      <xs:element name="words" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="chapterModel">
+    <xs:sequence>
+      <xs:element name="numChapter" type="xs:int"/>
+      <xs:element name="paragraphs" type="paragraphModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="paragraphModel">
+    <xs:sequence>
+      <xs:element name="lines" type="lineModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="numParagraph" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="lineModel">
+    <xs:sequence>
+      <xs:element name="content" type="xs:string" minOccurs="0"/>
+      <xs:element name="lineNum" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
