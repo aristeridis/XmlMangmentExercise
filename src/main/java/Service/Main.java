@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.management.modelmbean.XMLParseException;
-
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 public class Main {
 
 	public static void main(String[] args) {
@@ -40,16 +41,16 @@ public class Main {
 		}
 		try {
 			XsdGenerator.xsdGenerator();
-		try {
-		boolean validity = XmlValidator.validateXml(xmlFilePath ,xsdFilePath);
-		  if (validity)
-            System.out.println("The file is valid");
-     else
-            System.out.println("The file is not valid");
-
-		} catch (Exception e) {
-			e.getMessage();
-		}
+//		try {
+//		boolean validity = XmlValidator.validateXml(xmlFilePath ,xsdFilePath);
+//		  if (validity)
+//            System.out.println("The file is valid");
+//     else
+//            System.out.println("The file is not valid");
+//
+//		} catch (Exception e) {
+//			e.getMessage();
+//		}
 
 		} catch (IOException ex) {
 			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
